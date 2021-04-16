@@ -23,4 +23,5 @@ Now navigate to your browser
 ## Contact Details
 maryammuchai@gmail.com
 ## License
-MIT LICENSE Copyright(c) 2021 Maryam Muchai
+[MIT LICENSE](/home/maryam/Documents/python/News-API/LICENSE) 
+### Copyright(c) 2021 Maryam Muchai
