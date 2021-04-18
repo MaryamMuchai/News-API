@@ -14,18 +14,19 @@ class Source:
         self.country = country
 
 
-#author, title, description, url, urltoImage
+#author, title, description, url, date
 class Article:
     '''
     Defining the news article objects
     '''
 
-    def __init__(self ,author, title, description, url, urltoImage):
+    def __init__(self ,author, title, description, url, date, urlToImage):
         self.author = author
         self.title = title
         self.description = description
         self.url = url
-        self.urltoImage = urltoImage
+        self.date = publishedAt
+        self.image = urlToImage
 
 
 

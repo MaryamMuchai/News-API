@@ -65,6 +65,22 @@ def get_articles(source):
             articles_results_list = get_articles_response['articles']
             articles_results = process_articles(articles_results_list)
 
+    return articles_results
+
+def process_articles(articles_results):
+    '''
+    Function that processes the articles result and transform them to a list of objects
+    '''
+    #author, title, description, url, date , image, 
+    articles_list = []
+    for article_item in articles_results:
+        author = article_item.get('author')
+        title = article_item.get('title')
+        description = article_item.get('description')
+        url = article_item.get('url')
+        date = article_item.get('publishedAt')
+        image = article_item.get('urlToImage')
+
 
         
 
