@@ -29,3 +29,29 @@ def get_news(category):
 
     return news_results
             
+def process_results(news_list):
+    
+    '''
+    processes the news result to list of objects
+    '''
+     #id, name, description, url, category, language, country
+    news_results = []
+    for news in news_list:
+        id = news.get('id')
+        name = news.get('name')
+        description = news.get('description')
+        url = news.get('url')
+        category = news.get('category')
+        language = news.get('language')
+        country = news.get('country')
+
+        if description:
+            news_object = News(id, name, description, url, category, language, country)
+            news_results.append(news_object)
+            
+    return news_results
+
+
+        
+
+
