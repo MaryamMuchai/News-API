@@ -1,6 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        {% if title %}
+        <title>{{ title }}</title>
+        {% else %}
+        <title> Welcome to the news site</title>
+        {% endif %}
+    </head>
+    <body>
 {% extends 'bootsrap/base.html'%}
 
 <!--Navbar blcok-->
 {% block navbar %}
     {% include 'navbar.html' %}
 {% endblock %}
+</body>
+</html>

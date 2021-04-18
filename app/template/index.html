@@ -1,5 +1,8 @@
 {% import 'macros.html' as macro%} 
+{%extends 'base.html' %}
 <body>
+    <!--content block-->
+    {% block content %}
     <!---entertainment-->
     <h3> Spicy Entertainment!!!</h3>
     <ul>
@@ -30,4 +33,5 @@
     <ul>
         {{macro.displayNewsList(Science)}}
     </ul>
+    {% endblock%}
 </body>
