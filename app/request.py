@@ -17,10 +17,9 @@ def get_news(category):
     '''
     get_news_url = base_url.format(category,api_key) #passing the api_key and category from the config.py
 
-    with urllib.request.urlopen(get_news_url) as url:
+    with urllib.request.urlopen(get_news_url, data=None) as url:
         get_news_data = url.read()
         get_news_response = json.loads(get_news_data)
-
         news_results = None
 
         if get_news_response['sources']:
@@ -50,6 +49,21 @@ def process_results(news_list):
             news_results.append(news_object)
             
     return news_results
+
+def get_articles(source):
+    '''
+    Function that gets the json response to our url request
+    '''
+    get_articles_url = base_url.__format__(source,api_key)
+
+    with urllib.request.urlopen(get_articles_url, data=None) as url:
+        get_articles_data = url.read()
+        get_articles_response = json.loads(get_articles_data)
+        articles_results = None
+
+        if get_articles_response['articles']:
+            articles_results_list = get_articles_response['articles']
+            articles_results = process_articles(articles_results_list)
 
 
         

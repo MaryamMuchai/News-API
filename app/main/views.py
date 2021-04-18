@@ -19,3 +19,4 @@ def index():
     title = 'DailyBoomerang'
     return render_template('index.html',title = title,business = business,sport = sport, entertainment = entertainment, science = science ,health = health, tech = tech)
 
+
