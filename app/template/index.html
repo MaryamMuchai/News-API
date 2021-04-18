@@ -1,1 +1,33 @@
 {% import 'macros.html' as macro%} 
+<body>
+    <!---entertainment-->
+    <h3> Spicy Entertainment!!!</h3>
+    <ul>
+        {{macro.displayNewsList(Entertainment)}}
+    </ul>
+    <!---sports-->
+    <h3>Sporty Sports</h3>
+    <ul>
+        {{macro.displayNewsList(Sports)}}
+    </ul>
+    <!---tech-->
+    <h3>Techie Tech</h3>
+    <ul>
+        {{macro.displayNewsList(Tech)}}
+    </ul>
+    <!--business--->
+    <h3>Business World</h3>
+    <ul>
+        {{macro.displayNewsList(Business)}}
+    </ul>
+    <!--health--->
+    <h3>Health</h3>
+    <ul>
+        {{macro.displayNewsList(Health)}}
+    </ul>
+    <!---Science-->
+    <h3>Science Fiction</h3>
+    <ul>
+        {{macro.displayNewsList(Science)}}
+    </ul>
+</body>
