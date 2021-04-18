@@ -1,48 +1,96 @@
 {% import 'macros.html' as macro%} 
 {% extends 'base.html'%}
-<!DOCTYPE html>
- <html>
+<!--styles block-->
+{% block styles %}
+    {{ super() }}
+    <link href="https://fonts.googleapis.com/css?family=Black+Ops+One" rel="stylesheet">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/index.css')}}">
+{% endblock %}
 
-        {% if title %}
-        <title>{{ title }}</title>
-        {% else %}
-        <title> Welcome to the news site</title>
-        {% endif %}
-<head>
-</head>
-<body>
     <!--content block-->
     {% block content %}
-    <!---entertainment-->
-    <h3> Spicy Entertainment!!!</h3>
-    <ul>
-        {{macro.displayNewsList(entertainment)}}
-    </ul>
-    <!---sports-->
-    <h3>Sporty Sports</h3>
-    <ul>
-        {{macro.displayNewsList(sport)}}
-    </ul>
-    <!---tech-->
-    <h3>Techie Tech</h3>
-    <ul>
-        {{macro.displayNewsList(tech)}}
-    </ul>
-    <!--business--->
-    <h3>Business World</h3>
-    <ul>
-        {{macro.displayNewsList(business)}}
-    </ul>
-    <!--health--->
-    <h3>Health</h3>
-    <ul>
-        {{macro.displayNewsList(health)}}
-    </ul>
-    <!---Science-->
-    <h3>Science Fiction</h3>
-    <ul>
-        {{macro.displayNewsList(science)}}
-    </ul>
-    {% endblock%}
-</body>
-</html>
+    <div class="navbar navbar-light" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav" style="padding-left:30%">
+    <!---entertainment, sports , tech , business, health , science, -->
+    <li><a href="#tech">tech</a></li>
+    <li><a href="#business">Business</a></li>
+    <li><a href="#sport">Sports</a></li>
+    <li><a href="#entertainment">Entertainment</a></li>
+    <li><a href="#technology">Technology</a></li>
+    <li><a href="#science">Science</a></li>
+</ul>
+</div>
+</div>
+</div>
+<main class="container-fluid">
+<div class="page_name"> 
+<h1><img src="" alt="" width="150px" height="75px"> | DailyBoomerang</h1> 
+</div>
+<!-- health  -->
+<hr />
+<div class="source_section">
+<h3 id="health" class="source_section_name">Health News</h3>
+<ul>
+<div class="row">
+   {{ macro.displayNewsList(health) }}
+</div>
+</ul>
+</div>
+<!-- Business-->
+<hr />
+<div class="source_section">
+<h3 id="business" class="source_section_name">Business News</h3>
+<ul>
+<div class="row">
+   {{ macro.displayNewsList(business) }}
+</div>
+</ul>
+</div>
+<!-- Sport-->
+<hr />
+<div class="source_section">
+<h3 id="sport" class="source_section_name">Sports News</h3>
+<ul>
+<div class="row">
+   {{ macro.displayNewsList(sport) }}
+</div>
+</ul>
+</div>
+<!-- Entertainment-->
+<hr />
+<div class="source_section">
+<h3 id="entertainment" class="source_section_name">Entertainment News</h3>
+<ul>
+<div class="row">
+   {{ macro.displayNewsList(entertainment) }}
+</div>
+</ul>
+</div>
+<!--science-->
+<hr />
+<div class="source_section">
+<h3 id="entertainment" class="source_section_name">Science News</h3>
+<ul>
+<div class="row">
+   {{ macro.displayNewsList(science) }}
+</div>
+</ul>
+</div>
+<!-- Technology-->
+<hr />
+<div class="source_section">
+<h3 id="technology" class="source_section_name">Technology News</h3>
+<ul>
+<div class="row">
+   {{ macro.displayNewsList(tech) }}
+</div>
+</ul>
+</div>
+
+</main>
+<footer>
+<h4>Powered by News API</h4>
+</footer>
+{% endblock %}

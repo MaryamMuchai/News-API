@@ -20,13 +20,13 @@ class Article:
     Defining the news article objects
     '''
 
-    def __init__(self ,author, title, description, url, date, urlToImage):
+    def __init__(self ,author, title, description, url, date, image):
         self.author = author
         self.title = title
         self.description = description
         self.url = url
-        self.date = publishedAt
-        self.image = urlToImage
+        self.date = date
+        self.image = image
 
 
 
