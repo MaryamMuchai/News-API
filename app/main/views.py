@@ -10,13 +10,22 @@ def index():
     '''
     #Getting the popular news list
     science = get_news('science')
-    tech = get_news('tech')
+    technology = get_news('technology')
     health = get_news('health')
     business = get_news('business')
-    sport = get_news('sport')
+    sports = get_news('sports')
     entertainment = get_news('entertainment')
 
     title = 'DailyBoomerang'
-    return render_template('index.html',title = title,business = business,sport = sport, entertainment = entertainment, science = science ,health = health, tech = tech)
+    return render_template('index.html',title = title,science = science , technology = technology, health = health , business= business , sports= sports , entertainment = entertainment)
 
-@main.route('/')
+@main.route('/articles/<id>')
+def articles(id):
+    '''
+    view function that returns the source page and its data
+    '''
+    articles = get_articles(id)
+    source_id = id.upper()
+    title = f'{source_id} - Top Articles'
+
+    return render_template('articles.html', title=title, id= source_id, articles=articles)

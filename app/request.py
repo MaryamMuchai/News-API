@@ -28,7 +28,7 @@ def get_news(category):
 
     return news_results
             
-def process_results(news_list):
+def process_results(news_results):
     
     '''
     processes the news result to list of objects

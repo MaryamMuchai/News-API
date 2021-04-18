@@ -1,13 +1,4 @@
 {% extends 'bootstrap/base.html' %}
-<!---<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body> -->
     {% macro displayNewsList(news_list) %}
     {% for news in news_list %}
     <div class="col-md-2" class="source" style="margin: 20px;border: 2px solid #ccc; background-size: cover; background-color: lightgrey;height: 150px;padding: 60px 0px;border-radius: 4px;box-shadow: 0 0 25px grey">	
@@ -45,18 +36,4 @@
 
 
 
-   <!----<div class="col-xs-12 col-sm-4 col-md-2 col-lg-2 news-card">
-        <img src = " {{ news.poster}}" alt="{{news.title}} poster" class="img-responsive">
-        
-         <li>
-             <a href ="/news/{{}}">
-            {{news.title|truncate(10)}}
-             </a>
-            </li>
-         <p>{{news.description}}</p>
-         </div>
-
-    {% endfor %}
-{% endmacro %}
-</body>
-</html> -->
+   

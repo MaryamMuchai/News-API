@@ -1,5 +1,5 @@
-{% import 'macros.html' as macro%} 
-{% extends 'base.html'%}
+{% extends 'base.html' %}
+{% import 'macros.html' as macro %} 
 <!--styles block-->
 {% block styles %}
     {{ super() }}
@@ -14,9 +14,9 @@
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav" style="padding-left:30%">
     <!---entertainment, sports , tech , business, health , science, -->
-    <li><a href="#tech">tech</a></li>
+    <li><a href="#health">Health</a></li>
     <li><a href="#business">Business</a></li>
-    <li><a href="#sport">Sports</a></li>
+    <li><a href="#sports">Sports</a></li>
     <li><a href="#entertainment">Entertainment</a></li>
     <li><a href="#technology">Technology</a></li>
     <li><a href="#science">Science</a></li>
@@ -26,7 +26,7 @@
 </div>
 <main class="container-fluid">
 <div class="page_name"> 
-<h1><img src="" alt="" width="150px" height="75px"> | DailyBoomerang</h1> 
+<h1><img src ="/newspaper.jpg" alt="" width="150px" height="75px"> Daily Boomerang</h1> 
 </div>
 <!-- health  -->
 <hr />
@@ -54,7 +54,7 @@
 <h3 id="sport" class="source_section_name">Sports News</h3>
 <ul>
 <div class="row">
-   {{ macro.displayNewsList(sport) }}
+   {{ macro.displayNewsList(sports) }}
 </div>
 </ul>
 </div>
@@ -84,7 +84,7 @@
 <h3 id="technology" class="source_section_name">Technology News</h3>
 <ul>
 <div class="row">
-   {{ macro.displayNewsList(tech) }}
+   {{ macro.displayNewsList(technology) }}
 </div>
 </ul>
 </div>
