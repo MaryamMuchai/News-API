@@ -15,7 +15,7 @@ def get_news(category):
     '''
     getting the json response function
     '''
-    get_news_url = base_url.format(category,api_key) #passing the api_key and actegory from the config.py
+    get_news_url = base_url.format(category,api_key) #passing the api_key and category from the config.py
 
     with urllib.request.urlopen(get_news_url) as url:
         get_news_data = url.read()
@@ -46,7 +46,7 @@ def process_results(news_list):
         country = news.get('country')
 
         if description:
-            news_object = News(id, name, description, url, category, language, country)
+            news_object = Source(id, name, description, url, category, language, country)
             news_results.append(news_object)
             
     return news_results

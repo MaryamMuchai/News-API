@@ -15,6 +15,7 @@ def index():
     business = get_news('business')
     sport = get_news('sport')
     entertainment = get_news('entertainment')
+
     title = 'DailyBoomerang'
-    return render_template('index.html',title = title, business = business,  sport = sport, entertainment = entertainment, science = science ,health = health, tech = tech)
+    return render_template('index.html',title = title,business = business,sport = sport, entertainment = entertainment, science = science ,health = health, tech = tech)
 

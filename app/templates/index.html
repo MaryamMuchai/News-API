@@ -1,37 +1,48 @@
 {% import 'macros.html' as macro%} 
-{%extends 'base.html' %}
+{% extends 'base.html'%}
+<!DOCTYPE html>
+ <html>
+
+        {% if title %}
+        <title>{{ title }}</title>
+        {% else %}
+        <title> Welcome to the news site</title>
+        {% endif %}
+<head>
+</head>
 <body>
     <!--content block-->
     {% block content %}
     <!---entertainment-->
     <h3> Spicy Entertainment!!!</h3>
     <ul>
-        {{macro.displayNewsList(Entertainment)}}
+        {{macro.displayNewsList(entertainment)}}
     </ul>
     <!---sports-->
     <h3>Sporty Sports</h3>
     <ul>
-        {{macro.displayNewsList(Sports)}}
+        {{macro.displayNewsList(sport)}}
     </ul>
     <!---tech-->
     <h3>Techie Tech</h3>
     <ul>
-        {{macro.displayNewsList(Tech)}}
+        {{macro.displayNewsList(tech)}}
     </ul>
     <!--business--->
     <h3>Business World</h3>
     <ul>
-        {{macro.displayNewsList(Business)}}
+        {{macro.displayNewsList(business)}}
     </ul>
     <!--health--->
     <h3>Health</h3>
     <ul>
-        {{macro.displayNewsList(Health)}}
+        {{macro.displayNewsList(health)}}
     </ul>
     <!---Science-->
     <h3>Science Fiction</h3>
     <ul>
-        {{macro.displayNewsList(Science)}}
+        {{macro.displayNewsList(science)}}
     </ul>
     {% endblock%}
 </body>
+</html>
