@@ -19,72 +19,62 @@
     <li><a href="#sports">Sports</a></li>
     <li><a href="#entertainment">Entertainment</a></li>
     <li><a href="#technology">Technology</a></li>
-    <li><a href="#science">Science</a></li>
 </ul>
 </div>
 </div>
 </div>
 <main class="container-fluid">
 <div class="page_name"> 
-<h1><img src ="/newspaper.jpg" alt="" width="150px" height="75px"> Daily Boomerang</h1> 
+<h1>Daily Boomerang</h1> 
 </div>
+<!-- Business-->
+<hr />
+<div class="source_section">
+   <h3 id="business" class="source_section_name">Business News</h3>
+   <ul>
+      <div class="row">
+         {{ macro.displayNewsList(business) }}
+      </div>
+   </ul>
+</div>
+<!-- Sport-->
+<hr />
+<div class="source_section">
+   <h3 id="sport" class="source_section_name">Sports News</h3>
+   <ul>
+      <div class="row">
+         {{ macro.displayNewsList(sports) }}
+      </div>
+   </ul>
+</div>
+<!-- Entertainment-->
+<hr />
+<div class="source_section">
+   <h3 id="entertainment" class="source_section_name">Entertainment News</h3>
+   <ul>
+      <div class="row">
+         {{ macro.displayNewsList(entertainment) }}
+      </div>
+   </ul>
+</div>
+<!-- Technology-->
+<hr />
+<div class="source_section">
+   <h3 id="technology" class="source_section_name">Technology News</h3>
+   <ul>
+      <div class="row">
+         {{ macro.displayNewsList(technology) }}
+      </div>
+   </ul>
+</div>
+
 <!-- health  -->
 <hr />
 <div class="source_section">
 <h3 id="health" class="source_section_name">Health News</h3>
 <ul>
 <div class="row">
-   {{ macro.displayNewsList(health) }}
-</div>
-</ul>
-</div>
-<!-- Business-->
-<hr />
-<div class="source_section">
-<h3 id="business" class="source_section_name">Business News</h3>
-<ul>
-<div class="row">
-   {{ macro.displayNewsList(business) }}
-</div>
-</ul>
-</div>
-<!-- Sport-->
-<hr />
-<div class="source_section">
-<h3 id="sport" class="source_section_name">Sports News</h3>
-<ul>
-<div class="row">
-   {{ macro.displayNewsList(sports) }}
-</div>
-</ul>
-</div>
-<!-- Entertainment-->
-<hr />
-<div class="source_section">
-<h3 id="entertainment" class="source_section_name">Entertainment News</h3>
-<ul>
-<div class="row">
-   {{ macro.displayNewsList(entertainment) }}
-</div>
-</ul>
-</div>
-<!--science-->
-<hr />
-<div class="source_section">
-<h3 id="entertainment" class="source_section_name">Science News</h3>
-<ul>
-<div class="row">
-   {{ macro.displayNewsList(science) }}
-</div>
-</ul>
-</div>
-<!-- Technology-->
-<hr />
-<div class="source_section">
-<h3 id="technology" class="source_section_name">Technology News</h3>
-<ul>
-<div class="row">
-   {{ macro.displayNewsList(technology) }}
+{{ macro.displayNewsList(health) }}
 </div>
 </ul>
 </div>

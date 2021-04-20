@@ -5,10 +5,13 @@ from .models import Source, Article
 api_key = None
 # Base URL
 base_url = None
+# articles URL
+articlesurl = None
 
 def config_request(app):
-    global api_key, base_url
+    global api_key, base_url , articlesurl
     api_key = app.config['NEWS_API_KEY']
+    articlesurl=['NEWS_ARTICLES_BASE_URL']
     base_url = app.config['NEWS_API_BASE_URL']
 
 def get_news(category):
@@ -21,10 +24,12 @@ def get_news(category):
         get_news_data = url.read()
         get_news_response = json.loads(get_news_data)
         news_results = None
+        
 
         if get_news_response['sources']:
             news_results_list = get_news_response['sources']
             news_results = process_results(news_results_list)
+       
 
     return news_results
             
@@ -34,8 +39,8 @@ def process_results(news_results):
     processes the news result to list of objects
     '''
      #id, name, description, url, category, language, country
-    news_results = []
-    for news in news_list:
+    news_list = []
+    for news in news_results:
         id = news.get('id')
         name = news.get('name')
         description = news.get('description')
@@ -44,17 +49,21 @@ def process_results(news_results):
         language = news.get('language')
         country = news.get('country')
 
+        #import pdb; pdb.set_trace() #python  debugger
+
         if description:
             news_object = Source(id, name, description, url, category, language, country)
-            news_results.append(news_object)
+            news_list.append(news_object)
             
-    return news_results
 
-def get_articles(source):
+        print(news_list)
+    return news_list
+
+def get_articles(news_id):
     '''
     Function that gets the json response to our url request
     '''
-    get_articles_url = base_url.__format__(source,api_key)
+    get_articles_url = 'https://newsapi.org/v2/everything?sources={}&apiKey={}'.format(news_id,api_key)
 
     with urllib.request.urlopen(get_articles_url, data=None) as url:
         get_articles_data = url.read()
