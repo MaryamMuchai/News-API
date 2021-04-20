@@ -25,4 +25,4 @@ def articles(news_id):
     view function that returns the source page and its data
     '''
     articles = get_articles(news_id)
-    return render_template('articles.html', title=title,articles = articles)
+    return render_template('articles.html',articles = articles)

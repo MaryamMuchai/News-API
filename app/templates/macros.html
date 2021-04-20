@@ -3,8 +3,7 @@
     <div class="col-md-2" class="source" style="margin: 20px;border: 2px solid #ccc; background-size: cover; background-color: lightgrey;height: 150px;padding: 60px 0px;border-radius: 4px;box-shadow: 0 0 25px rgb(39, 20, 212)">
     <p class="text-center" style="font-style: bold;font-size: 18px;background-color: rgba(0,0,0,1);">{{news.id}}</p>
     <p class="text-center" style="font-style: bold;font-size: 18px;background-color: rgba(0,0,0,1);">{{news.title}}</p>
-    <a href ="{{id}}">Read Articles</a>   
-</div> 
+    <a href="/articles/{{news.id}}"><button type="button" class="btn btn-light">Read Articles</button></a></div> 
 {% endfor %}
 {% endmacro %}
 
