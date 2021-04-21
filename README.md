@@ -1,6 +1,7 @@
 # News-API Application
 ![Screenshot from 2021-04-20 21-55-06](https://user-images.githubusercontent.com/78798386/115450643-dc17c600-a224-11eb-84e0-8acc9dbb5128.png)
 ## Author: Maryam Muchai
+## Live site: https://maryamnewsapi.herokuapp.com/
 ## Description
 This web application is built using Python framework Flask. The app displays information about news from most popular sources, top headlines in the World, categorical 
 and also a user can search for any topic.
